@@ -1,14 +1,12 @@
 import secrets
-from typing import List
-
 
 text = "snake_case"
 integer_list = [secrets.randbelow(10) for _ in range(10)]
 
-def to_camel(string: str) -> str:
+def to_camel(string):
     ...
 
-def even_only(int_list: List[int]) -> List[int]:
+def even_only(int_list):
     ...
 
 print(to_camel(text)) # Expected: snakeCase
