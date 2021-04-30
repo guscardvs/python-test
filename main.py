@@ -1,38 +1,16 @@
-import secrets
-from typing import Dict, List
+import sys
 
 
-text = "snake_case"
-integer_list = [secrets.randbelow(10) for _ in range(10)]
-dictionary = {
-    "name": ["Gustavo", "Eduardo"],
-    "email": ["self.gustavocorrea@gmail.com", "edunascimento.mariano@gmail.com"],
-}
-
-
-def to_camel(string: str) -> str:
+def sock_merchant(array_length: int, array: list[int]):
     ...
 
 
-def even_only(int_list: List[int]) -> List[int]:
-    ...
+if __name__ == "__main__":
 
+    array_length = int(input())
 
-def to_record(dictionary: Dict[str, List[str]]) -> List[Dict[str, str]]:
-    ...
+    array = list(map(int, sys.stdin.readline().rstrip().split()))
 
-class Person:
-    def __init__(self, name: str) -> None:
-        self.name = name
-    
-        
+    result = sock_merchant(array_length, array)
 
-print(to_camel(text))  # Expected: snakeCase
-print(even_only(integer_list))  # Expected: list with only even numbers ex.: [2,4,6]
-print(to_record(dictionary))
-# Expected:
-# [
-#   {"name":"Gustavo", "email":"self.gustavocorrea@gmail.com"},
-#   {"name":"Eduardo", "email":"edunascimento.mariano@gmail.com"}
-# ]
-print(str(Person("Gustavo"))) # Expected: "My name is Gustavo"
+    print(str(result) + "\n")
